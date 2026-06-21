@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarujan Satgunanathan — Du service au match point</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#a85c5f; --rose-band:#b06e73; --ink:#1a1a1a; --sub:#6f6f6f;
+  --paper:#fff; --border:#262626; --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Baskerville",Georgia,serif;font-size:17px;line-height:1.8}
+h1,h2,h3,.mont{font-family:"Montserrat",Arial,sans-serif}
+img{max-width:100%;display:block}
+a{color:var(--rose)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+
+/* header */
+.siteheader{background:#fff;text-align:center;padding:46px 26px 0}
+.siteheader h1{font-family:"Montserrat";font-weight:800;color:var(--ink);font-size:clamp(34px,6vw,68px);line-height:1.05;letter-spacing:-.015em;margin:0 auto;max-width:16ch}
+.siteheader .who{font-family:"Libre Baskerville";color:var(--sub);font-size:clamp(15px,1.6vw,18px);max-width:64ch;margin:18px auto 0;line-height:1.6}
+
+nav.menu{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid #eee;margin-top:30px}
+nav.menu .row{display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;padding:14px 26px}
+nav.menu a,nav.menu .dropbtn{font-family:"Montserrat";font-weight:700;font-size:17px;color:var(--rose);text-decoration:none;background:none;border:0;cursor:pointer;padding:4px 2px}
+nav.menu a:hover,nav.menu .dropbtn:hover{color:#7e4346}
+.navcv{border:2px solid var(--rose)!important;color:#fff!important;background:var(--rose)!important;border-radius:6px;padding:8px 16px!important;font-size:14px!important}
+.navcv:hover{background:#8f4b4e}
+.drop{position:relative}
+.dropmenu{position:absolute;top:34px;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e3d6d6;border-radius:8px;box-shadow:0 16px 36px -18px rgba(0,0,0,.3);padding:8px;min-width:330px;display:none;text-align:left;z-index:50}
+.drop:hover .dropmenu,.dropmenu:hover,.drop.open .dropmenu{display:block}
+.dropmenu a{display:block;font-size:14.5px;padding:9px 12px;border-radius:6px;color:var(--ink);font-family:"Libre Baskerville"}
+.dropmenu a:hover{background:#f6efef;color:var(--rose)}
+
+/* accueil band */
+.band{background:var(--rose-band);color:#fff;padding:58px 0}
+.band .grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:50px;align-items:center}
+.photo-wrap{position:relative}
+.photo{aspect-ratio:4/5;border-radius:46%/38%;overflow:hidden;background:#fff;border:5px solid #fff}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .ph,.proimg .ph,.vidframe .ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;font-family:"Montserrat";font-weight:700;color:#9a5a5d;background:#f3e9e9;padding:22px}
+.photo .ph small,.proimg .ph small,.vidframe .ph small{font-family:"Libre Baskerville";font-weight:400;font-size:13px;color:#a07477;line-height:1.5}
+.nametag{position:absolute;top:-16px;left:-10px;font-family:"Montserrat";font-weight:800;font-size:32px;color:#fff;background:var(--rose);transform:rotate(-7deg);padding:4px 16px;border-radius:8px;box-shadow:0 6px 0 #8f4b4e}
+.band p{margin:0 0 16px;font-size:18px;line-height:1.8}
+.band p.big{font-size:clamp(20px,2.2vw,25px);line-height:1.45}
+.band b{font-weight:700}
+
+/* sections */
+section{padding:66px 0;border-bottom:1px solid #eee}
+.center{text-align:center}
+h2.page{font-family:"Montserrat";font-weight:800;color:var(--ink);font-size:clamp(28px,4.4vw,46px);line-height:1.1;text-align:center;margin:0 auto 8px}
+.officiel{text-align:center;font-style:italic;color:var(--sub);font-size:17px;max-width:50ch;margin:0 auto 6px}
+.coupline{text-align:center;color:#7a5b5c;font-size:15.5px;max-width:64ch;margin:6px auto 30px}
+h2.sm{font-size:clamp(24px,3.4vw,34px)}
+.intro{font-size:18px;max-width:74ch;margin:0 auto;text-align:center;color:#2a2a2a}
+
+/* vidéo accueil */
+.vidframe{max-width:760px;margin:24px auto 0;border-radius:12px;overflow:hidden;border:1px solid #ecdede}
+.vidframe .ph{aspect-ratio:16/9}
+.tag{font-family:"Montserrat";font-weight:700;font-size:12px;letter-spacing:.04em;color:var(--rose);background:#fff;border:1px solid #e3d2d2;border-radius:6px;padding:4px 10px}
+
+/* fil directeur */
+.fil{background:#faf6f6}
+.coups{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:30px}
+.coup{text-align:center;padding:18px 12px;border-top:3px solid #e3c9ca}
+.coup.first{border-top-color:var(--rose)}
+.coup .n{font-family:"Montserrat";font-weight:700;font-size:13px;color:var(--rose);text-transform:uppercase}
+.coup h3{font-family:"Montserrat";font-weight:700;font-size:18px;margin:8px 0 6px}
+.coup p{font-size:14px;color:#5a5a5a;margin:0;line-height:1.6}
+
+/* compétence */
+.comp{scroll-margin-top:88px}
+.comp+.comp{padding-top:60px}
+table.list{width:100%;max-width:980px;margin:0 auto;border-collapse:collapse;font-size:16px}
+table.list td{border:1px solid var(--border);padding:15px 20px;vertical-align:middle}
+table.list td.l{width:60%}
+table.list td.r{text-align:center}
+.legend{text-align:center;font-style:italic;color:#8a6b6c;font-size:15px;margin:14px 0 0}
+.divider{display:flex;justify-content:center;margin:40px 0}
+.divider svg{width:32px;height:32px}
+
+/* jauge degré acquisition */
+.acq{display:inline-flex;align-items:center;gap:10px}
+.gauge{display:inline-flex;gap:3px;align-items:center}
+.gauge i{width:17px;height:17px;display:inline-block;background-color:#e3cfd0;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ccircle%20cx='12'%20cy='5'%20r='3.2'%20fill='black'/%3E%3Cpath%20d='M9.5%207%20L5%2019%20Q12%2022%2019%2019%20L14.5%207%20Z'%20fill='black'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ccircle%20cx='12'%20cy='5'%20r='3.2'%20fill='black'/%3E%3Cpath%20d='M9.5%207%20L5%2019%20Q12%2022%2019%2019%20L14.5%207%20Z'%20fill='black'/%3E%3C/svg%3E") center/contain no-repeat}
+.gauge i.on{background-color:var(--rose)}
+.acqword{font-family:"Montserrat";font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--rose)}
+.acqlabel{font-family:"Montserrat";font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sub);margin-right:4px}
+
+/* preuve (trace -> analyse) */
+.ac{scroll-margin-top:88px;margin-top:34px}
+.ac .pl{font-family:"Montserrat";font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--rose);margin-bottom:4px}
+.ac h3{font-family:"Montserrat";font-weight:800;color:var(--ink);font-size:clamp(21px,2.7vw,29px);line-height:1.18;margin:0 0 6px;max-width:32ch}
+.ac .crit{font-style:italic;color:#555;margin:0 0 14px}
+.proprow{display:grid;grid-template-columns:.62fr .38fr;gap:38px;align-items:start;margin-top:16px}
+.proprow .txt p{margin:0 0 14px;text-align:justify}
+.lab{font-weight:700;font-family:"Libre Baskerville"}
+.proimg{border-radius:10px;overflow:hidden;border:1px solid #ecdede}
+.proimg img{width:100%;height:auto;display:block}
+.proimg .ph{aspect-ratio:4/3}
+.trace{display:inline-block;margin-top:6px;font-family:"Montserrat";font-weight:700;font-size:14px;color:var(--rose);text-decoration:none;border:1.5px dashed var(--rose);padding:9px 16px;border-radius:6px}
+.fill{color:#a8443a;font-weight:700;font-style:italic}
+
+/* expériences */
+.exps{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:30px}
+.exp{border:1px solid var(--border);border-radius:10px;padding:24px;scroll-margin-top:88px}
+.exp h3{font-family:"Montserrat";font-weight:800;font-size:21px;margin:0 0 4px}
+.exp .ctx{font-style:italic;color:#555;font-size:15px;margin:0 0 14px}
+.exp .pv{font-family:"Montserrat";font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--sub);margin-bottom:8px}
+.links a{display:inline-block;margin:0 8px 8px 0;font-family:"Montserrat";font-weight:700;font-size:13px;color:#fff;background:var(--rose);border-radius:5px;padding:6px 12px;text-decoration:none}
+.links a:hover{background:#8f4b4e}
+
+/* projet pro + cv */
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.btn{font-family:"Montserrat";font-weight:700;font-size:15px;text-decoration:none;padding:13px 24px;border-radius:6px;border:2px solid var(--rose);color:var(--rose);background:#fff;cursor:pointer}
+.btn.solid{background:var(--rose);color:#fff}
+.sound{font-family:"Montserrat";font-weight:700;font-size:13px;background:transparent;border:1.5px solid #fff;color:#fff;border-radius:22px;padding:9px 16px;cursor:pointer}
+
+footer{background:var(--rose-band);color:#fff;padding:48px 0;text-align:center;border:0}
+footer h2{font-family:"Montserrat";font-weight:800;font-size:26px;margin:0 0 10px}
+footer p{margin:6px 0;font-size:16px}
+footer a{color:#fff}
+footer .small{font-size:13px;opacity:.85;margin-top:20px}
+.minifoot{text-align:center;color:var(--sub);font-size:12.5px;padding:18px;font-family:"Montserrat";font-weight:700;letter-spacing:.03em}
+
+@media(max-width:880px){
+  .band .grid,.proprow,.exps{grid-template-columns:1fr;gap:28px}
+  .coups{grid-template-columns:repeat(2,1fr)}
+  table.list td.l{width:auto}
+  .proimg{max-width:340px}
+}
+@media(max-width:600px){
+  nav.menu .row{gap:16px}
+  .coups{grid-template-columns:1fr}
+  .dropmenu{position:static;transform:none;display:block;border:0;box-shadow:none;min-width:0;padding-left:14px}
+  .acq{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<header class="siteheader">
+  <h1>Du service au match point</h1>
+  <p class="who">Sarujan Satgunanathan — BUT Gestion des Entreprises et des Administrations, parcours Gestion comptable, fiscale et financière · IUT de Paris Rives de Seine</p>
+</header>
+
+<nav class="menu">
+  <div class="row">
+    <a href="#accueil">Accueil</a>
+    <div class="drop">
+      <button class="dropbtn">Par compétence ▾</button>
+      <div class="dropmenu">
+        <a href="#c1">1 — Lire le jeu · Analyser</a>
+        <a href="#c2">2 — Smash ou amorti · Décider</a>
+        <a href="#c3">3 — Le jeu en double · Piloter</a>
+        <a href="#c4">4 — Les fondamentaux · Produire</a>
+        <a href="#c5">5 — Le débrief · Évaluer</a>
+      </div>
+    </div>
+    <div class="drop">
+      <button class="dropbtn">Par expérience ▾</button>
+      <div class="dropmenu">
+        <a href="#c1a2">Reprise d'entreprise (SAE)</a>
+        <a href="#c3a1">Eco Kids — création d'entreprise</a>
+        <a href="#c1a1">Conseil SARL / SAS</a>
+        <a href="#c2a1">Cartographie des risques</a>
+        <a href="#c3a2">Site internet codé</a>
+        <a href="#c4a1">Alternances (finance &amp; compta)</a>
+      </div>
+    </div>
+    <a href="#contact">Contact</a>
+    <a class="navcv" href="assets/cv.pdf" download>↓ CV</a>
+  </div>
+</nav>
+
+<div class="band" id="accueil">
+  <div class="wrap">
+    <div class="grid">
+      <div class="photo-wrap">
+        <div class="nametag">Saru&nbsp;🏸</div>
+        <div class="photo">
+          <img src="assets/photo.jpg" alt="Sarujan Satgunanathan">
+        </div>
+      </div>
+      <div>
+        <p class="big">Au badminton comme en gestion : on lit le jeu, on décide vite, on tient l'échange. Voici la preuve, coup après coup, de ce que mes trois années m'ont appris.</p>
+        <p>Étudiant en BUT3 GEA (parcours <b>Gestion comptable, fiscale et financière</b>), je relie ici mes <b>expériences en entreprise</b> et mes <b>SAE</b> aux cinq compétences du diplôme — du premier service au dernier point.</p>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <a class="btn solid" href="assets/cv.pdf" download style="border-color:#fff;background:#fff;color:var(--rose)">↓ Télécharger mon CV</a>
+          <button class="sound" id="soundBtn">♪ Écouter ma bande-son</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:46px;text-align:center">
+      <span class="tag">▶ VIDÉO DE PRÉSENTATION</span>
+      <div class="vidframe"><div class="ph">VIDÉO À INSÉRER<small>Ma présentation (&lt; 2 min) — j'explique pourquoi <b>le badminton</b> est mon fil directeur.</small></div></div>
+    </div>
+  </div>
+</div>
+<audio id="track" src="assets/ambiance.wav" loop preload="none"></audio>
+
+<section class="fil" id="fil">
+  <div class="wrap">
+    <h2 class="page sm">Mon fil directeur : le badminton</h2>
+    <p class="intro">Un échange suit toujours la même logique. Mes cinq compétences aussi — chacune est un coup du rallye.</p>
+    <div class="coups">
+      <div class="coup first"><div class="n">Coup 1 · Analyser</div><h3>Lire le jeu</h3><p>Observer avant de frapper.</p></div>
+      <div class="coup"><div class="n">Coup 2 · Décider</div><h3>Smash ou amorti</h3><p>Choisir le bon coup.</p></div>
+      <div class="coup"><div class="n">Coup 3 · Piloter</div><h3>Le jeu en double</h3><p>Se coordonner à plusieurs.</p></div>
+      <div class="coup"><div class="n">Coup 4 · Produire</div><h3>Les fondamentaux</h3><p>Le geste juste, répété.</p></div>
+      <div class="coup"><div class="n">Coup 5 · Évaluer</div><h3>Le débrief</h3><p>Revoir pour ajuster.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="comp" id="c1">
+  <div class="wrap">
+    <h2 class="page">Lire le jeu</h2>
+    <p class="officiel">Compétence 1 · Analyser les processus de l'organisation dans son environnement</p>
+    <p class="coupline">Avant de frapper, on lit le terrain : comprendre l'organisation et ses enjeux avant d'agir. <b>Niveau visé : 3.</b></p>
+    <table class="list">
+      <tr><td class="l"><b>Conseiller la forme juridique la plus adaptée</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></span></td></tr>
+      <tr><td class="l"><b>Évaluer la performance des processus et proposer des améliorations</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+    </table>
+    <p class="legend">*Deux apprentissages critiques retenus pour cette compétence, avec leur degré d'acquisition.</p>
+    <div class="divider"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 16 9 8 9z" fill="#a85c5f"/><path d="M8 9 5 21 19 21 16 9z" fill="#fff" stroke="#a85c5f" stroke-width="1.4"/><path d="M10 9 9 21M14 9 15 21M12 9 12 21" stroke="#a85c5f" stroke-width="1"/></svg></div>
+
+    <div class="ac" id="c1a1">
+      <p class="pl">Apprentissage critique 1</p>
+      <h3>Choisir une forme juridique, c'est arbitrer</h3>
+      <p class="crit">Conseiller un type d'organisation adapté au porteur de projet.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> note de conseil comparant SARL et SAS pour un porteur de projet.</p>
+          <p><span class="lab">L'analyse :</span> le choix ne relève pas du droit récité mais d'un arbitrage : régime social du dirigeant, fiscalité des dividendes, gouvernance, protection du patrimoine. La compétence se prouve dans la <b>hiérarchisation de ces critères selon le profil</b> du porteur — donc dans la capacité à transformer une connaissance juridique en recommandation engageante.</p>
+        </div>
+        <div class="proimg"><img src="assets/sae501.png" alt="SAE 5.01 — Note de conseil SARL / SAS"></div>
+      </div>
+      <a class="trace" href="assets/sae501-dossier-final.pdf" download>↓ Télécharger la trace</a>
+    </div>
+
+    <div class="ac" id="c1a2">
+      <p class="pl">Apprentissage critique 2</p>
+      <h3>Du diagnostic au levier d'action</h3>
+      <p class="crit">Évaluer la performance des processus et proposer des améliorations.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> diagnostic stratégique de l'entreprise cible (SAE reprise).</p>
+          <p><span class="lab">L'analyse :</span> la difficulté n'est pas de décrire l'entreprise mais de <b>relier ses faiblesses internes aux menaces du marché</b> pour isoler les rares leviers réellement actionnables. La progression tient là : passer d'un diagnostic exhaustif et descriptif à une <b>priorisation</b> qui oriente la stratégie de reprise.</p>
+        </div>
+        <div class="proimg"><img src="assets/reprise-dossier2.png" alt="Diagnostic stratégique — Reprise d'entreprise"></div>
+      </div>
+      <a class="trace" href="assets/reprise-entreprise-dossier2.pdf" download>↓ Télécharger la trace</a>
+    </div>
+  </div>
+</section>
+
+<section class="comp" id="c2">
+  <div class="wrap">
+    <h2 class="page">Smash ou amorti</h2>
+    <p class="officiel">Compétence 2 · Aider à la prise de décision</p>
+    <p class="coupline">La balle arrive vite : choisir le bon coup à partir de la donnée, du cadre juridique et du risque. <b>Niveau visé : 3.</b></p>
+    <table class="list">
+      <tr><td class="l"><b>Évaluer les risques et bâtir un plan de maîtrise</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></span></td></tr>
+      <tr><td class="l"><b>Analyser les contraintes juridiques (Droit numérique & RGPD)</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+      <tr><td class="l"><b>Exploiter des données pour accompagner la décision</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+    </table>
+    <p class="legend">*Trois apprentissages critiques retenus pour cette compétence, avec leur degré d'acquisition.</p>
+    <div class="divider"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 16 9 8 9z" fill="#a85c5f"/><path d="M8 9 5 21 19 21 16 9z" fill="#fff" stroke="#a85c5f" stroke-width="1.4"/><path d="M10 9 9 21M14 9 15 21M12 9 12 21" stroke="#a85c5f" stroke-width="1"/></svg></div>
+
+    <div class="ac" id="c2a1">
+      <p class="pl">Apprentissages critiques 22.05 & 32.04</p>
+      <h3>Rendre le risque visible pour pouvoir trancher</h3>
+      <p class="crit">Évaluer les risques et élaborer des mesures préventives de minimisation.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> Fichier Excel interactif comprenant une Grille de scoring, un Registre des risques et un Plan d'action.</p>
+          <p><span class="lab">L'analyse :</span> Coter la probabilité et l'impact permet d'<b>objectiver un risque</b> perçu au départ de façon subjective (obtention de la criticité brute). L'enjeu n'est pas qu'un simple inventaire : grâce à l'onglet "Plan d'action et contrôles clés", j'ai proposé des solutions concrètes de réduction des risques (sauvegardes, chiffrement, formations) pour obtenir une criticité nette. La cartographie devient ainsi un véritable outil d'aide à la décision.</p>
+        </div>
+        <div class="proimg"><img src="assets/registre-risques.png" alt="Registre des risques — Grille de Scoring"></div>
+      </div>
+      <a class="trace" href="assets/registre-des-risques.xlsx" download>↓ Télécharger le registre complet (Excel)</a>
+    </div>
+
+    <div class="ac" id="c2a2">
+      <p class="pl">Apprentissage critique 22.04</p>
+      <h3>Le web sous contrainte juridique</h3>
+      <p class="crit">Analyser les contraintes et leur impact sur le fonctionnement de l'organisation.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> Mini-registre RGPD intégré au fichier Excel et conception de ce site internet codé.</p>
+          <p><span class="lab">L'analyse :</span> Le droit numérique impose de lourdes obligations. Mon mini-registre RGPD prouve ma capacité à identifier ces contraintes (mentions légales, obtention du consentement, protection contre la fuite de données). Mieux encore, la création de ce portfolio m'a permis de comprendre comment ces contraintes dictent directement la <b>structure technique et la gestion des données</b> d'un projet web.</p>
+        </div>
+        <div class="proimg"><img src="assets/registre-risques.png" alt="Mini-registre RGPD"></div>
+      </div>
+      <a class="trace" href="assets/registre-des-risques.xlsx" download>↓ Télécharger le Mini-registre RGPD (Excel)</a>
+    </div>
+
+    <div class="ac" id="c2a3">
+      <p class="pl">Apprentissage critique 3</p>
+      <h3>Une valorisation n'est jamais neutre</h3>
+      <p class="crit">Exploiter des données pour accompagner une décision d'investissement.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> Tableau des flux actualisés (DCF) et budget de trésorerie de la reprise.</p>
+          <p><span class="lab">L'analyse :</span> le DCF transforme des données incertaines en une fourchette décisionnelle. Le raisonnement se joue dans la <b>sensibilité aux hypothèses</b> : décider, c'est savoir quelle hypothèse fait basculer le « go / no-go » et pouvoir la défendre.</p>
+        </div>
+        <div class="proimg"><img src="assets/reprise-dossier2.png" alt="Tableau des flux actualisés — Reprise d'entreprise"></div>
+      </div>
+      <a class="trace" href="assets/reprise-entreprise-dossier2.pdf" download>↓ Télécharger la trace</a>
+    </div>
+  </div>
+</section>
+
+<section class="comp" id="c3">
+  <div class="wrap">
+    <h2 class="page">Le jeu en double</h2>
+    <p class="officiel">Compétence 3 · Piloter les relations avec les parties prenantes de l'organisation</p>
+    <p class="coupline">En double, on ne gagne pas seul : se placer, communiquer, porter le projet à plusieurs. <b>Niveau visé : 3.</b></p>
+    <table class="list">
+      <tr><td class="l"><b>Mener un projet collaboratif dans la durée</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></span></td></tr>
+      <tr><td class="l"><b>Combiner les méthodes de communication selon la stratégie</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+    </table>
+    <p class="legend">*Deux apprentissages critiques retenus pour cette compétence, avec leur degré d'acquisition.</p>
+    <div class="divider"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 16 9 8 9z" fill="#a85c5f"/><path d="M8 9 5 21 19 21 16 9z" fill="#fff" stroke="#a85c5f" stroke-width="1.4"/><path d="M10 9 9 21M14 9 15 21M12 9 12 21" stroke="#a85c5f" stroke-width="1"/></svg></div>
+
+    <div class="ac" id="c3a1">
+      <p class="pl">Apprentissage critique 1</p>
+      <h3>Le vrai défi est la coordination, pas la tâche</h3>
+      <p class="crit">Mener un projet collaboratif et mobiliser l'intelligence collective.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> dossier et présentation finale du projet Eco Kids.</p>
+          <p><span class="lab">L'analyse :</span> mener le projet a surtout supposé d'<b>aligner des contributions hétérogènes sous contrainte de temps</b>, et d'arbitrer en continu entre avancer vite et garder l'équipe soudée. La compétence se lit dans cet arbitrage, pas dans le livrable lui-même.</p>
+        </div>
+        <div class="proimg"><img src="assets/ecokids.png" alt="Dossier Final Eco Kids — BUT GEA"></div>
+      </div>
+      <a class="trace" href="assets/ecokids-dossier-final.pdf" download>↓ Télécharger la trace</a>
+    </div>
+
+    <div class="ac" id="c3a2">
+      <p class="pl">Apprentissage critique 2</p>
+      <h3>Coder un site, c'est structurer un message</h3>
+      <p class="crit">Combiner les méthodes de communication en lien avec la stratégie.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> Architecture de ce e-portfolio codé de A à Z.</p>
+          <p><span class="lab">L'analyse :</span> Coder le site a imposé de <b>traduire un objectif de communication en arborescence et en hiérarchie visuelle</b> : que voit-on d'abord ? Vers quoi l'évaluateur est-il dirigé ? Le geste technique de programmation sert ici une intention stratégique claire — c'est ce lien qui fait la preuve de la compétence.</p>
+        </div>
+        <div class="proimg"><img src="assets/capture-code.png" alt="Code source — JamaisChezMoi (index.html)"></div>
+      </div>
+      <a class="trace" href="index.html">↓ Ce site est lui-même la trace</a>
+    </div>
+  </div>
+</section>
+
+<section class="comp" id="c4">
+  <div class="wrap">
+    <h2 class="page">Les fondamentaux</h2>
+    <p class="officiel">Compétence 4 · Produire l'information comptable, fiscale et sociale de l'organisation</p>
+    <p class="coupline">Le footwork, les gammes : le geste juste, répété avec rigueur, sur lequel tout repose. <b>Niveau visé : 2.</b></p>
+    <table class="list">
+      <tr><td class="l"><b>Produire et sécuriser une information comptable fiable</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></span></td></tr>
+      <tr><td class="l"><b>Évaluer les actifs et passifs pour une information décisionnelle</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+    </table>
+    <p class="legend">*Deux apprentissages critiques retenus pour cette compétence, avec leur degré d'acquisition.</p>
+    <div class="divider"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 16 9 8 9z" fill="#a85c5f"/><path d="M8 9 5 21 19 21 16 9z" fill="#fff" stroke="#a85c5f" stroke-width="1.4"/><path d="M10 9 9 21M14 9 15 21M12 9 12 21" stroke="#a85c5f" stroke-width="1"/></svg></div>
+
+    <div class="ac" id="c4a1">
+      <p class="pl">Apprentissage critique 1</p>
+      <h3>La fiabilité n'est pas une formalité</h3>
+      <p class="crit">Traiter, contrôler et sécuriser l'information comptable, fiscale et sociale.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> livrables d'alternance (anonymisés) — clôtures, rapprochements, révision.</p>
+          <p><span class="lab">L'analyse :</span> en conditions réelles, la difficulté est la <b>fiabilité sous délai</b>. Les contrôles de cohérence ne valident pas un travail déjà fait : ils sont la condition même de la confiance accordée à l'information produite. Maîtriser cela, c'est endosser la <b>responsabilité de la qualité</b>, pas seulement la saisie.</p>
+        </div>
+        <div class="proimg"><div class="ph">CONFIDENTIEL<small>Livrable en entreprise — non communicable</small></div></div>
+      </div>
+    </div>
+
+    <div class="ac" id="c4a2">
+      <p class="pl">Apprentissage critique 2</p>
+      <h3>Retraiter, c'est révéler l'économie réelle</h3>
+      <p class="crit">Évaluer les actifs/passifs et déterminer charges et produits.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> feuille de retraitements de la cible (SAE reprise).</p>
+          <p><span class="lab">L'analyse :</span> les retraitements <b>révèlent l'écart entre la comptabilité affichée et la réalité économique</b>. Les choisir, c'est arbitrer ce qui est normatif et ce qui ne l'est pas — donc produire une information assez fiable pour fonder une valorisation. Le chiffre n'a de valeur que par ce tri.</p>
+        </div>
+        <div class="proimg"><img src="assets/reprise-dossier2.png" alt="Feuille de retraitements — Reprise d'entreprise"></div>
+      </div>
+      <a class="trace" href="assets/reprise-entreprise-dossier2.pdf" download>↓ Télécharger la trace</a>
+    </div>
+  </div>
+</section>
+
+<section class="comp" id="c5">
+  <div class="wrap">
+    <h2 class="page">Le débrief d'après-match</h2>
+    <p class="officiel">Compétence 5 · Évaluer l'activité de l'organisation</p>
+    <p class="coupline">On revoit le match : rentabilité, trésorerie, budgets — pour décider des ajustements. <b>Niveau visé : 2.</b></p>
+    <table class="list">
+      <tr><td class="l"><b>Mesurer la rentabilité d'un investissement</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></span></td></tr>
+      <tr><td class="l"><b>Piloter la trésorerie sur le court terme</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+      <tr><td class="l"><b>Construire des budgets prévisionnels cohérents</b></td><td class="r"><span class="acq"><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></span></td></tr>
+    </table>
+    <p class="legend">*Trois apprentissages critiques retenus pour cette compétence, avec leur degré d'acquisition.</p>
+    <div class="divider"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 16 9 8 9z" fill="#a85c5f"/><path d="M8 9 5 21 19 21 16 9z" fill="#fff" stroke="#a85c5f" stroke-width="1.4"/><path d="M10 9 9 21M14 9 15 21M12 9 12 21" stroke="#a85c5f" stroke-width="1"/></svg></div>
+
+    <div class="ac" id="c5a1">
+      <p class="pl">Apprentissage critique 1</p>
+      <h3>La valeur est un scénario, pas un chiffre</h3>
+      <p class="crit">Mesurer la rentabilité d'un investissement.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="acqword">Maîtrisé</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> tableau des flux actualisés (DCF) — dossier reprise d'entreprise.</p>
+          <p><span class="lab">L'analyse :</span> mesurer la rentabilité, c'est rendre <b>explicite et défendable le scénario sous-jacent</b> plutôt que produire un nombre. La maîtrise se voit dans la capacité à assumer les hypothèses et à montrer leur effet sur la décision d'investir.</p>
+        </div>
+        <div class="proimg"><img src="assets/reprise-dossier2.png" alt="Tableau des flux actualisés — Valorisation reprise"></div>
+      </div>
+      <a class="trace" href="assets/reprise-entreprise-dossier2.pdf" download>↓ Télécharger la trace</a>
+    </div>
+
+    <div class="ac" id="c5a2">
+      <p class="pl">Apprentissage critique 2</p>
+      <h3>Le mensuel révèle ce que l'annuel cache</h3>
+      <p class="crit">Réaliser la gestion de trésorerie sur le court terme.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> budget de trésorerie mensuel de la première année.</p>
+          <p><span class="lab">L'analyse :</span> le pas mensuel fait apparaître des <b>tensions de trésorerie invisibles dans un prévisionnel annuel</b>. Anticiper ces creux conditionne la survie de la reprise : la compétence est dans l'anticipation, pas dans le calcul.</p>
+        </div>
+        <div class="proimg"><img src="assets/reprise-dossier2.png" alt="Budget de trésorerie mensuel — Reprise"></div>
+      </div>
+      <a class="trace" href="assets/reprise-entreprise-dossier2.pdf" download>↓ Télécharger la trace</a>
+    </div>
+
+    <div class="ac" id="c5a3">
+      <p class="pl">Apprentissage critique 3</p>
+      <h3>Anticiper pour mieux piloter</h3>
+      <p class="crit">Réaliser à moyen terme des budgets d'exploitation et des bilans prévisionnels.</p>
+      <div class="acq"><span class="acqlabel">Degré d'acquisition</span><span class="gauge"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="acqword">Acquis</span></div>
+      <div class="proprow">
+        <div class="txt">
+          <p><span class="lab">La trace :</span> Compte de résultat et bilan prévisionnels sur 3 ans.</p>
+          <p><span class="lab">L'analyse :</span> Construire ces états financiers demande de lier la stratégie commerciale à la réalité comptable. L'objectif n'est pas d'avoir une certitude absolue, mais de bâtir un modèle cohérent pour s'assurer de l'équilibre financier global du projet.</p>
+        </div>
+        <div class="proimg"><img src="assets/sae501.png" alt="Bilan prévisionnel 3 ans"></div>
+      </div>
+      <a class="trace" href="assets/sae501-dossier-final.pdf" download>↓ Télécharger la trace</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" style="scroll-margin-top:80px"><span id="cv" style="display:block;height:0;visibility:hidden"></span>
+  <div class="wrap">
+    <h2>Prêt pour le match ?</h2>
+    <p>Vous souhaitez échanger sur mon parcours, mes compétences ou une opportunité d'alternance ?</p>
+    <div class="cta-row">
+      <a href="mailto:sarusatg@gmail.com" class="btn solid" style="border-color:#fff;">M'envoyer un email</a>
+      <a href="https://www.linkedin.com/in/sarujan-satgunanathan" target="_blank" class="btn" style="border-color:#fff; color:#fff; background:transparent;">Mon Profil LinkedIn</a>
+    </div>
+    <div class="small minifoot">
+      © 2026 Sarujan Satgunanathan — Fait avec passion et codé de A à Z. <br>
+      Portfolio BUT3 GEA - Parcours GC2F
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sound button
+const audio = document.getElementById('track');
+const soundBtn = document.getElementById('soundBtn');
+soundBtn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    soundBtn.textContent = '■ Arrêter la musique';
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+    soundBtn.textContent = '♪ Écouter ma bande-son';
+  }
+});
+audio.addEventListener('ended', () => {
+  soundBtn.textContent = '♪ Écouter ma bande-son';
+});
+
+// Close dropdowns when a menu link is clicked
+document.querySelectorAll('.dropmenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelectorAll('.drop').forEach(d => {
+      d.classList.remove('open');
+      const menu = d.querySelector('.dropmenu');
+      if (menu) { menu.style.display = 'none'; setTimeout(() => menu.style.display = '', 300); }
+    });
+  });
+});
+</script>
+</body>
+</html>
